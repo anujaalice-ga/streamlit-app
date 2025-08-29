@@ -25,3 +25,8 @@ jobs:
 
       - name: Lint check
         run: flake8 app.py
+
+      - name: Run Streamlit app
+        run: |
+          nohup streamlit run app.py --server.headless true &
+          sleep 10
